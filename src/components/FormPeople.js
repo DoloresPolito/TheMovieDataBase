@@ -21,17 +21,12 @@ const FormPeople = function () {
         if (result) {
           navigate(`/api/people/${result.completeName}`);
         } else {
-          alert("no se encontro usuario");
-
+          alert("User not found");
           navigate("/api/inicio");
         }
       })
       .catch((err) => console.log("error", err));
-
-      
   };
-
-   
 
   return (
     <div className="formularioPersonas">

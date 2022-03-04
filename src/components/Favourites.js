@@ -7,8 +7,8 @@ import ContentFavourites from "./ContentFavourites";
 const Favourites = function () {
   const { user } = useContext(UserContext);
   const [favoritos, setFavoritos] = useState([]);
-
   const idParametro = user.id;
+  
   useEffect(() => {
     axios
       .get(`/api/favoritos/${idParametro}`)

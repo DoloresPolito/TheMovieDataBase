@@ -35,9 +35,9 @@ const SingleContent = () => {
       })
       .then((res) => res.data)
       .then(() => {
-        console.log("la pelicula fue agregada a favoritos");
+        console.log("Movie added to favorites");
       })
-      .catch((err) => console.log('Ocurrió un error', err))
+      .catch((err) => console.log('Error', err))
   };
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const SingleContent = () => {
       .then((res) => res.data)
       .then((data) => setData(data))
       .catch((err) => {
-        console.log("Ocurrió un error", err);
+        console.log("Error", err);
       });
   }, [urlKeyIdEnv]);
 
@@ -54,6 +54,7 @@ const SingleContent = () => {
     <section key={data.id} className="layout">
       <div className="is-flex">
         <img
+        className="imagen"
           src={data.poster_path ? `${baseURL}${data.poster_path}` : notImage}
           alt=""
           style={{ width: "300px", height: "450px" }}

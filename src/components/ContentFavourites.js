@@ -9,22 +9,14 @@ const ContentFavourites = function ({ favoritos }) {
     "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.dreamstime.com%2F%25C3%25A1rbol-cerca-del-r%25C3%25ADo-paisaje-esc%25C3%25A9nico-de-la-naturaleza-image131862406&psig=AOvVaw08mPJHYY-LD0ZORgDPEKCO&ust=1645823436302000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMiJ6qqgmfYCFQAAAAAdAAAAABAJ";
 
   const { user } = useContext(UserContext);
+
   const removeFav = function (id) {
     alert("Movie removed from favorites");
-
     axios
       .delete(`/api/favoritos/${user.id}/${id.movieId}`)
       .then((res) => res.data)
       .then(() => {
-        console.log("la pelicula fue removida de favoritos: ");
-
-        axios
-          .get(`/api/favoritos/${user.id}`)
-          .then((res) => res.data)
-          .then((fav) => {
-            console.log("nuevos favoritos", fav);
-          })
-          .catch((err) => console.log("error", err));
+        console.log("The movie was removed");
       });
   };
 

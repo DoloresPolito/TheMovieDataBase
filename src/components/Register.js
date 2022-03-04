@@ -5,7 +5,6 @@ import { useInput } from "../hooks/useInput";
 
 const Register = () => {
   const navigate = useNavigate();
-
   const name = useInput("");
   const lastname = useInput("");
   const email = useInput("");

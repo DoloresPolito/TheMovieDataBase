@@ -32,7 +32,6 @@ const App = function () {
   }, []);
 
   const { setUser } = useContext(UserContext);
-
   const search = useContext(SearchContext);
 
   useEffect(() => {
@@ -43,36 +42,26 @@ const App = function () {
         setUser(user);
       })
       .catch((err) => {
-        console.log("Ocurrió un error", err);
+        console.log("Error", err);
       });
   }, [setUser]);
 
   return (
     <>
-    
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Grid movies={movies} />} />
         <Route path="/api/inicio" element={<Grid movies={movies} />} />
         <Route path="api/inicio/:id" element={<SingleContent />} />
-        <Route
-          path="api/peliculas/busqueda/:input"
-          element={<Grid movies={search.search} />}
-        />
-        <Route
-          path="api/peliculas/busqueda/:input/:id"
-          element={<SingleContent />}
-        />
-        {/* <Route path="/api/user" element={<Grid movies={movies} />} /> */}
+        <Route path="api/peliculas/busqueda/:input" element={<Grid movies={search.search} />}/>
+        <Route path="api/peliculas/busqueda/:input/:id" element={<SingleContent />} />
         <Route path="/api/favoritos" element={<Favourites />} />
         <Route path="/api/people/:name" element={<UserProfile />} />
         <Route path="/api/register" element={<Register />} />
         <Route path="/api/login" element={<Login />} />
         <Route path="/api/logout" element={<Login />} />
       </Routes>
-
-      
     </>
   );
 };
