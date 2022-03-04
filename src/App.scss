@@ -1,0 +1,218 @@
+body {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.control {
+  margin-top: 20px;
+}
+
+/* //CONTENEDOR*/
+
+.contenedor {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* //PAGINA PRINCIPAL*/
+
+.layout {
+  width: 90%;
+  height: auto;
+  background-color: black;
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.card-image {
+  background-color: black;
+  align-items: center;
+}
+
+/* //PELICULAS SINGLE*/
+.layout {
+  background-color: black;
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.is-flex {
+  background-color: black;
+  width: 100%;
+}
+.div_single {
+  width: 70%;
+  background-color: black;
+  height: 560px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.strong {
+  color: white;
+}
+
+/*//NAVBAR*/
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: fixed;
+  background-color: black;
+  justify-content: space-around;
+  padding-top: 15px;
+  @media screen and (max-width: 768px) {
+    height: 50px;
+  }
+}
+
+.input {
+  border-radius: 15px;
+}
+
+.nombreNavbar {
+  color: white;
+  font-weight: bold;
+}
+
+.inputMovies {
+  margin-left: 30px;
+}
+
+.button {
+  border-radius: 15px;
+  margin-left: 30px;
+}
+
+.bott-log {
+  margin-left: 33%;
+}
+
+/*login-out*/
+
+.sign {
+  padding-top: 100px;
+  padding-bottom: 300px;
+  //    display: flex;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: black;
+  //  align-items: center;
+
+  //  @media screen and (max-width: 768px) {
+  //   height: 50px;
+  // }
+}
+
+.formularioLogin {
+  @media screen and(max-width: 768px) {
+    width: 100%;
+    align-content: center;
+   
+  }
+}
+
+.inputLogin {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 300px;
+  width: 50%;
+}
+
+.textRegister {
+  margin-left: 550px;
+}
+
+.buttonLog {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 165px;
+
+  @media screen and(max-width: 768px) {
+    width: 30%;
+    align-items: flex-end;
+    margin-left: 230px;
+  }
+}
+
+.buttonReg {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 120px;
+  @media screen and(max-width: 768px) {
+    width: 50%;
+    align-items: flex-end;
+    margin-left: 210px;
+  }
+}
+
+/*//SEARCH */
+
+.buttonSearch {
+  border-radius: 15px;
+  margin-left: 25px;
+}
+
+.remove {
+  margin-left: 1100px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.redondo {
+  margin-left: 50%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/*FAVORITOS   */
+
+.layout {
+  background-color: black;
+  margin-top: 0px;
+  padding-top: 100px;
+  height: 100%;
+}
+
+/* USER PROFILE */
+
+.layoutPerfil {
+  width: 100%;
+  height: 100%;
+}
+
+.perfil {
+  background-color: black;
+}
+
+.nombre {
+  color: white;
+  font-size: 2em;
+  font-weight: normal;
+  margin-left: 50px;
+}
+.mail {
+  font-size: 1em;
+  margin-left: 50px;
+  margin-bottom: 0px;
+}
+
+.favorites {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 0px;
+  padding-top: 0px;
+}

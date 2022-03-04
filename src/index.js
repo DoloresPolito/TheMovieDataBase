@@ -1,10 +1,30 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState, createContext } from "react";
+import { render } from "react-dom";
 import "./index.css";
+import "bulma/css/bulma.min.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import SearchProvider from "./context/SearchContext";
+import PeopleContext from "./context/PeopleContext"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <h1>The Movie Database</h1>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+export const UserContext = createContext();
+
+const Root = () => {
+  const [user, setUser] = useState({});
+
+  return (
+    <BrowserRouter>
+      <React.StrictMode>
+        <UserContext.Provider value={{ user, setUser }}>
+          <SearchProvider>
+            <PeopleContext>
+            <App />
+            </PeopleContext>
+          </SearchProvider>
+        </UserContext.Provider>
+      </React.StrictMode>
+    </BrowserRouter>
+  );
+};
+
+export default render(<Root />, document.getElementById("root"));
